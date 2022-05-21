@@ -28,8 +28,8 @@ urlpatterns = [
     path('api/', include(structure_router.urls)),
     path('api/', include(profile_router.urls)),
     # djoser urls
-    path('api/auth/', include('djoser.urls')),  # new
-    re_path(r'^auth/', include('djoser.urls.authtoken')),  # new
+    path('api/auth/', include('djoser.urls')),
+    re_path(r'^auth/', include('djoser.urls.authtoken')),
 ]
 
 

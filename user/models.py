@@ -22,7 +22,7 @@ class Profile(models.Model):
     sex = models.CharField(max_length=100,choices=SEX, verbose_name='пол')
   #  militaryID = models.BooleanField(default=True)
     Type_of_education = models.CharField(max_length=100, choices=EDUCATION)
-    Qualification = models.CharField(max_length=100)
+    # Qualification = models.CharField(max_length=100)
    # Courses = models.CharField(max_length=100)
    # speciality = models.CharField(max_length=100)
     diploma = models.FileField(blank=True)
