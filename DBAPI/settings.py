@@ -111,7 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru'
 
 TIME_ZONE = 'UTC'
 
@@ -138,10 +138,3 @@ REST_FRAMEWORK = {
     'rest_framework.authentication.BasicAuthentication',
     'rest_framework.authentication.SessionAuthentication',]}
 
-DJOSER = {
-# 'PASSWORD_RESET_CONFIRM_URL': '#/password/reset/confirm/{uid}/{token}',
-# 'USERNAME_RESET_CONFIRM_URL': '#/username/reset/confirm/{uid}/{token}',
-# 'ACTIVATION_URL': '#/activate/{uid}/{token}',
-# 'SEND_ACTIVATION_EMAIL': True,
-'SERIALIZERS': {},
-}
