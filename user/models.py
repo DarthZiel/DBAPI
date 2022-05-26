@@ -4,10 +4,11 @@ from django.contrib.auth.models import AbstractUser
 class User(AbstractUser):
     fio = models.CharField(max_length=100)
     REQUIRED_FIELDS = ["fio"]
-CATEGORY = [
-    ('Без категории', 'Без категории'), ('Вторая категория', 'Вторая категория'), ('Первая категория', 'Первая категория'), ('Высшая категория','Высшая категория')
-]
+
 SEX = [('мужчина', 'мужчина'), ('женщина','женщина')]
+
+CATEGORY = [('Без категории', 'Без категории'), ('Вторая категория', 'Вторая категория'), ('Первая категория', 'Первая категория'), ('Высшая категория','Высшая категория')
+]
 class Profile(models.Model):
 
     fio = models.CharField(max_length=100)
@@ -20,7 +21,7 @@ class Profile(models.Model):
 
     experience = models.CharField(max_length=100, verbose_name='стаж')
     sex = models.CharField(max_length=100,choices=SEX, verbose_name='пол')
-    Category = models.CharField(max_length=100, choices=CATEGORY, default=CATEGORY[0])
+    Category = models.CharField(max_length=100, choices=CATEGORY, verbose_name='категория')
     diploma = models.FileField(blank=True)
 
     def __str__(self):
