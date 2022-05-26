@@ -12,16 +12,11 @@ user_router.register(r'user', UserViewSet)
 
 profile_router = routers.SimpleRouter()
 profile_router.register(r'profile', ProfileViewSet)
-
 position_router = routers.SimpleRouter()
 position_router.register(r'position', PostitonViewSet)
-
 structure_router = routers.SimpleRouter()
 structure_router.register(r'structure', StructureViewSet)
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('drug.urls')),
-    # api urls
     path('api/',include(drug_router.urls)),
     path('api/', include(user_router.urls)),
     path('api/', include(position_router.urls)),
@@ -30,6 +25,9 @@ urlpatterns = [
     # djoser urls
     path('api/auth/', include('djoser.urls')),
     re_path(r'^auth/', include('djoser.urls.authtoken')),
+
+    path('admin/', admin.site.urls),
+    path('', include('drug.urls')),
 ]
 
 
