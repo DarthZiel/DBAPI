@@ -14,8 +14,8 @@ class Profile(models.Model):
     position = models.ForeignKey("Position", on_delete=models.CASCADE,blank=True)
     date_of_birth = models.DateField(verbose_name='дата рождения')
     structure = models.ForeignKey('Structure', on_delete=models.CASCADE,blank=True)
-    schedule = models.CharField(max_length=100, verbose_name='Часы приема')
-    cabinet = models.CharField(max_length=15, verbose_name='Кабинет')
+    schedule = models.CharField(max_length=100, verbose_name='Часы приема') # пн.ср.пт -8:00
+    cabinet = models.CharField(max_length=15, verbose_name='Кабинет') 
     photo = models.ImageField(blank=True)
 
     experience = models.CharField(max_length=100, verbose_name='стаж')
